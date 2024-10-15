@@ -1,0 +1,1 @@
+from validaciones.validaciones import validar_entero
