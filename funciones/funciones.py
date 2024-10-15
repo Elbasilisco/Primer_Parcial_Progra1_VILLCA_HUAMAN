@@ -39,8 +39,20 @@ def mayor_cantidad():
             bandera = False
     return maximo
 
+def recaudacion(indice):
+    ganancia = garages[indice][3] * garages[indice][4]
+    return ganancia
+
+def obtener_recaudaciones():
+    recaudaciones = 0
+    for i in range(len(garages)):
+        recaudaciones += recaudacion(i)
+    return recaudaciones
+
+
 obtener_existencias()
 #print(mostrar_matriz_texto_tabla(garages, columnas))
 #print(garages)
 #print(f"La cantidad total de autos es: {total_autos()}")
 print(f"La mayor cantidad de autos en un garage es de: {mayor_cantidad()}")
+print(f"La recaudacion total es de: {obtener_recaudaciones()}")
